@@ -1,4 +1,3 @@
-// The content of this file should be valid typescript.
 'use server';
 
 /**
@@ -64,7 +63,15 @@ const visualizeAnalysisResultsFlow = ai.defineFlow<
     outputSchema: VisualizeAnalysisResultsOutputSchema,
   },
   async input => {
+    // Check if analysisResults is too long to avoid token limit error
+    if (input.analysisResults.length > 5000) {
+      console.warn('Analysis results too long, returning original image URL.');
+      return { visualizedImageUrl: input.xrayImageUrl };
+    }
+
     const {output} = await visualizeAnalysisResultsPrompt(input);
     return output!;
   }
 );
+
+    
