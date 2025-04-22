@@ -1,1 +1,3 @@
-// Flows will be imported for their side effects in this file.
+import '@/ai/flows/summarize-analysis-results.ts';
+import '@/ai/flows/analyze-xray-image.ts';
+import '@/ai/flows/visualize-analysis-results.ts';

@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -41,6 +42,11 @@ body {
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --primary-color: 0 0% 100%; /* White or light gray */
+    --secondary-color: 211 72% 53%; /* Calming blue (#3498DB) */
+    --accent-color: 25 77% 52%; /* Subtle orange (#E67E22) */
+    --text-color: 0 0% 3.9%;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -75,6 +81,11 @@ body {
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --primary-color: 0 0% 3.9%; /* White or light gray */
+    --secondary-color: 211 72% 53%; /* Calming blue (#3498DB) */
+    --accent-color: 25 77% 52%; /* Subtle orange (#E67E22) */
+   --text-color: 0 0% 98%;
   }
 }
 
@@ -86,3 +97,4 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
