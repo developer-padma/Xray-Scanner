@@ -40,8 +40,8 @@ const visualizeAnalysisResultsPrompt = ai.definePrompt({
       visualizedImageUrl: z.string().describe('The URL of the X-ray image with highlighted areas of concern.'),
     }),
   },
-  prompt: `You are an expert medical image analyst. Given an X-ray image URL and analysis results in JSON format, your task is to visualize the analysis results on the X-ray image, highlighting areas of concern.  Return the URL of the visualized image.
-
+  prompt: `You are an expert medical image analyst. Given an X-ray image URL, your task is to visualize the X-ray image, highlighting areas of concern.  If no analysis results are provided, return the original image URL.
+      
 X-ray Image URL: {{{xrayImageUrl}}}
 {{#if includeAnalysisResults}}
 Analysis Results:
