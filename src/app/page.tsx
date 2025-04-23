@@ -129,7 +129,7 @@ export default function Home() {
               </div>
             )}
             <Input type="file" accept="image/*" onChange={handleImageUpload} className="mb-4" />
-            <Button onClick={handleAnalyze} disabled={isLoading} className="bg-secondary-color text-primary-color hover:bg-blue-700">
+            <Button onClick={handleAnalyze} disabled={isLoading} className="bg-green-500 text-primary-color hover:bg-blue-700">
               {isLoading ? 'Analyzing...' : 'Analyze Xray'}
             </Button>
           </CardContent>
@@ -192,4 +192,5 @@ export default function Home() {
     </div>
   );
 }
+
 
