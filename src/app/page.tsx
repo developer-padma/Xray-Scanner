@@ -140,13 +140,7 @@ export default function Home() {
             <CardDescription>Detailed findings from the AI analysis</CardDescription>
           </CardHeader>
           <CardContent className="p-6">
-            {visualizedImageUrl && (
-              <img
-                src={visualizedImageUrl}
-                alt="Visualized Analysis"
-                className="max-w-full max-h-64 rounded-md mb-4"
-              />
-            )}
+          
             {summary ? (
               <>
                 <Textarea value={summary} readOnly className="mb-4 h-40"/>
